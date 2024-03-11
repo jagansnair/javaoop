@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class SymmetricMatrix {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -34,13 +33,19 @@ public class SymmetricMatrix {
                 }
             }
         }
+        System.out.println("Matrix is");
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+               System.out.print( matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
         
         if (symmetric) {
             System.out.println("The matrix is symmetric.");
         } else {
             System.out.println("The matrix is not symmetric.");
         }
-        
         scanner.close();
     }
 }
