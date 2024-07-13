@@ -49,4 +49,3 @@ public class SymmetricMatrix {
         scanner.close();
     }
 }
-

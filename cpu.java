@@ -1,57 +1,30 @@
-public class cpu {
-    private double price;
-
-    public cpu(double price) {
-        this.price = price;
-    }
-
-    public class Processor {
-        private int cores;
-        private String manufacturer;
-
-        public Processor(int cores, String manufacturer) {
-            this.cores = cores;
-            this.manufacturer = manufacturer;
-        }
-
-        public int getCores() {
-            return cores;
-        }
-
-        public String getManufacturer() {
-            return manufacturer;
-        }
-    }
-
-    public static class Ram {
-        private int memory;
-        private String manufacturer;
-
-        public Ram(int memory, String manufacturer) {
-            this.memory = memory;
-            this.manufacturer = manufacturer;
-        }
-
-        public int getMemory() {
-            return memory;
-        }
-
-        public String getManufacturer() {
-            return manufacturer;
-        }
-    }
-
-    public static void main(String[] args) {
-        Cpu cpu = new Cpu(500);
-        Cpu.Processor processor = cpu.new Processor(8, "Intel");
-        Cpu.Ram ram = new Cpu.Ram(16, "Corsair");
-
-        System.out.println("Processor Information:");
-        System.out.println("No. of Cores: " + processor.getCores());
-        System.out.println("Manufacturer: " + processor.getManufacturer());
-
-        System.out.println("\nRAM Information:");
-        System.out.println("Memory: " + ram.getMemory() + "GB");
-        System.out.println("Manufacturer: " + ram.getManufacturer());
-    }
+class cpu
+{
+	int price=3000;
+	class processor
+	{
+		int cores=4;
+		String manufacturer="pentium";
+	}
+	void proc()
+	{
+		cpu.processor pc = new cpu.processor();
+		System.out.println("processor:-\ncores="+pc.cores+"\nmanufacturer="+pc.manufacturer);
+	}
+	static class ram
+	{
+		static int memory = 64;
+		static String man="intel";
+	}
+	public static void main(String args[])
+	{
+		cpu cp= new cpu();
+		cpu.ram rm =  new cpu.ram();
+		System.out.println("cpu:-\nprice="+cp.price);
+		cp.proc();
+		System.out.println("ram:-\nmemory="+rm.memory+"\nmanufacturer="+rm.man);
+	}
 }
+			
+			
+		
